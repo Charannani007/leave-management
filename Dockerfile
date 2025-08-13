@@ -5,7 +5,7 @@ RUN mvn -q -e -DskipTests dependency:go-offline
 COPY . .
 RUN mvn -q -DskipTests clean package
 
-FROM tomcat:9.0-jdk17-temurin
+FROM tomcat:10.1-jdk17-temurin
 WORKDIR /usr/local/tomcat
 COPY conf/server.xml conf/server.xml
 RUN rm -rf webapps/ROOT
