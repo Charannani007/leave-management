@@ -60,11 +60,6 @@
   <scope>provided</scope>
 </dependency>
 
-<dependency>
-<groupId>com.github.jsimone</groupId>
-<artifactId>webapp-runner</artifactId>
-<version>9.0.41.0</version>
-</dependency>
  
   </dependencies>
 
