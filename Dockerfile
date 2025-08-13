@@ -7,3 +7,8 @@ RUN mvn -q -DskipTests clean package
 
 FROM tomcat:9.0-jdk17-temurin
 WORKDIR /usr/local/tomcat
+COPY conf/server.xml conf/server.xml
+RUN rm -rf webapps/ROOT
+COPY --from=build /app/target/*.war webapps/ROOT.war
+EXPOSE 8080
+CMD ["catalina.sh", "run"]
