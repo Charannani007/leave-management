@@ -5,5 +5,5 @@ RUN mvn -q -e -DskipTests dependency:go-offline
 COPY . .
 RUN mvn -q -DskipTests clean package
 
-FROM eclipse-temurin:17-jre
-WORKDIR /app
+FROM tomcat:9.0-jdk17-temurin
+WORKDIR /usr/local/tomcat
